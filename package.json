@@ -1,0 +1,29 @@
+{
+    "name": "mockend",
+    "description": "Mock API provided by Mockend",
+    "private": true,
+    "version": "0.0.1",
+    "author": "Guilherme Oka (ghomarques@gmail.com)",
+    "license": "MIT",
+    "type": "module",
+    "keywords": [
+        "mockend",
+        "mock",
+        "api",
+        "development"
+    ],
+    "engines": {
+        "node": ">=19.0.0",
+        "pnpm": ">=7.14.0",
+        "npm": "please-use-pnpm",
+        "yarn": "please-use-pnpm"
+    },
+    "scripts": {
+        "lint": "prettier --ignore-path ./.gitignore --loglevel warn --write .mockend.json"
+    },
+    "pre-commit": "lint",
+    "devDependencies": {
+        "pre-commit": "^1.2.2",
+        "prettier": "^2.7.1"
+    }
+}
