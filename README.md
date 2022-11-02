@@ -24,7 +24,7 @@ Mockend App reads the [.mockend.json](./.mockend.json) at the root level of this
 -   "pnpm dry-run": join the .json files at models folder into object and logs it
 -   "pnpm generate": override current .mockend.json with the joined .json files at models folder
 -   "pnpm push": execute git.sh, commit and pushe .mockend.json to repo
--   "pnpm update": execute "pnpm generate" and "pnpm push"
+-   "pnpm all": execute "pnpm generate" and "pnpm push"
 
 #
 
