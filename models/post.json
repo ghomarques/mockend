@@ -1,0 +1,13 @@
+{
+    "Post": {
+        "title": {
+            "loremWords": { "minLength": 20, "maxLength": 50 }
+        },
+        "comments": {
+            "hasMany": "Comment"
+        },
+        "user": {
+            "belongsTo": "User"
+        }
+    }
+}

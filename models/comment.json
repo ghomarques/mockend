@@ -1,0 +1,14 @@
+{
+    "Comment": {
+        "date": {
+            "dateTime": {
+                "min": "1994-01-01T00:00:00Z",
+                "max": "2077-12-31T23:59:59Z"
+            }
+        },
+        "body": { "loremSentences": { "minLength": 100, "maxLength": 200 } },
+        "post": {
+            "belongsTo": "Post"
+        }
+    }
+}

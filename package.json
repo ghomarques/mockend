@@ -3,9 +3,17 @@
     "description": "Mock API provided by Mockend",
     "private": true,
     "version": "0.0.1",
-    "author": "Guilherme Oka (ghomarques@gmail.com)",
     "license": "MIT",
     "type": "module",
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/ghomarques/mockend"
+    },
+    "author": {
+        "name": "Guilherme Oka",
+        "email": "ghomarques@gmail.com"
+    },
     "keywords": [
         "mockend",
         "mock",
@@ -18,11 +26,23 @@
         "npm": "please-use-pnpm",
         "yarn": "please-use-pnpm"
     },
-    "scripts": {
-        "lint": "prettier --ignore-path ./.gitignore --loglevel warn --write .mockend.json"
-    },
     "pre-commit": "lint",
-    "devDependencies": {
+    "scripts": {
+        "preinstall": "cp .env.example .env",
+        "lint:fix": "eslint --cache --fix --ignore-path ./.gitignore --ext .js .",
+        "lint:format": "prettier --ignore-path ./.gitignore --loglevel warn --write ./**/*.{js,json}",
+        "lint": "pnpm lint:fix && pnpm lint:format",
+        "dry-run": "node . --operation dry-run",
+        "generate": "node . --operation generate",
+        "push": "node . --operation push",
+        "update": "node . --operation update"
+    },
+    "dependencies": {
+        "chalk": "^5.1.2",
+        "dotenv-safe": "^8.2.0",
+        "eslint": "^8.26.0",
+        "eslint-plugin-prettier": "^4.2.1",
+        "minimist": "^1.2.7",
         "pre-commit": "^1.2.2",
         "prettier": "^2.7.1"
     }

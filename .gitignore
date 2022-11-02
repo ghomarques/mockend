@@ -13,6 +13,9 @@ pnpm-debug.log*
 .env*
 !.env.*.example
 
+# cache
+.eslintcache
+
 # editor
 .vscode/*
 !.vscode/extensions.json
