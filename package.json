@@ -15,10 +15,11 @@
         "email": "ghomarques@gmail.com"
     },
     "keywords": [
-        "mockend",
-        "mock",
-        "api",
-        "development"
+        "Mockend",
+        "REST",
+        "GraphQL",
+        "development",
+        "tools"
     ],
     "engines": {
         "node": ">=19.0.0",
@@ -26,7 +27,6 @@
         "npm": "please-use-pnpm",
         "yarn": "please-use-pnpm"
     },
-    "pre-commit": "lint",
     "scripts": {
         "preinstall": "cp .env.example .env",
         "lint:fix": "eslint --cache --fix --ignore-path ./.gitignore --ext .js .",
@@ -43,7 +43,6 @@
         "eslint": "^8.26.0",
         "eslint-plugin-prettier": "^4.2.1",
         "minimist": "^1.2.7",
-        "pre-commit": "^1.2.2",
         "prettier": "^2.7.1"
     }
 }

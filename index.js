@@ -11,7 +11,7 @@ const updateModels = async () => {
     models.forEach((model) => {
         updated = {
             ...updated,
-            ...model.content
+            ...model.content,
         };
     });
     return updated;
@@ -48,7 +48,7 @@ const push = async () => {
             }
             case 'push': {
                 info('Push to repo');
-                text(await(push()));
+                text(await push());
                 break;
             }
             case 'update': {
@@ -58,7 +58,7 @@ const push = async () => {
                 info('Updated .mockend.json');
                 text(await readJSON(paths.mockend));
                 info('Push to repo');
-                text(await(push()));
+                text(await push());
                 break;
             }
             default: {
