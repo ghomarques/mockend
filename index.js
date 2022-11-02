@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import minimist from 'minimist';
 import { paths, commitMessage } from './config.js';
 import { info, error, text } from './utils/logger.js';
@@ -48,6 +47,7 @@ const push = async () => {
                 break;
             }
             case 'push': {
+                info('Push to repo');
                 text(await(push()));
                 break;
             }
@@ -57,6 +57,7 @@ const push = async () => {
                 await writeJSON(paths.mockend, await updateModels());
                 info('Updated .mockend.json');
                 text(await readJSON(paths.mockend));
+                info('Push to repo');
                 text(await(push()));
                 break;
             }
