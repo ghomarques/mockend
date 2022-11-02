@@ -35,7 +35,7 @@
         "dry-run": "node . --operation dry-run",
         "generate": "node . --operation generate",
         "push": "node . --operation push",
-        "update": "node . --operation update"
+        "all": "node . --operation update"
     },
     "dependencies": {
         "chalk": "^5.1.2",
